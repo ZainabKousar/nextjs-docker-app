@@ -28,5 +28,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}/nextjs-docker-app:latest
+          tags: ghcr.io/${{ github.actor }}/nextjs-docker-app:latest
 
