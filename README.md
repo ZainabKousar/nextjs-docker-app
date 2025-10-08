@@ -9,13 +9,13 @@ The primary objective of this project was to gain practical experience in contai
 
 🎯 Objectives
 
-Containerize a Next.js application using Docker.
+Containerize a Next.js application using Docker
 
-Automate the build and push process through GitHub Actions and GitHub Container Registry (GHCR).
+Automate the build and push process through GitHub Actions and GitHub Container Registry (GHCR)
 
-Deploy the containerized app to a Kubernetes cluster running on Minikube.
+Deploy the containerized app to a Kubernetes cluster running on Minikube
 
-Access the live application through a web browser using port forwarding or NodePort.
+Access the live application through a web browser using port forwarding or NodePort
 
 🧩 Project Architecture
 
@@ -41,40 +41,33 @@ GitHub Container Registry (GHCR) – Image storage
 
 Kubernetes (Minikube) – Container orchestration
 
-AWS EC2 (Ubuntu) – Cloud host for the cluster
+AWS EC2 (Ubuntu) – Cloud environment
 
-YAML – Deployment and service configuration
+YAML – Deployment and service manifests
 
 🧱 Setup Summary
 
 Cloned the repository and initialized a Next.js starter application.
 
-Created a Dockerfile following best practices — using a lightweight base image, caching dependencies efficiently, and keeping image size minimal.
+Created a Dockerfile following best practices — lightweight base image, caching dependencies efficiently, minimal image size.
 
-Designed a GitHub Actions workflow to automate Docker image build and push to GHCR upon each push to the main branch.
+Designed a GitHub Actions workflow to automate Docker image build and push to GHCR on every push to main.
 
-Built Kubernetes manifests inside a k8s/ folder —
+Built Kubernetes manifests in a k8s/ folder:
 
-deployment.yaml for defining replicas, container image, and probes
+deployment.yaml → defines replicas, container image, and probes
 
-service.yaml for exposing the app to external traffic
+service.yaml → exposes the app externally
 
 Deployed the app on Minikube (running on AWS EC2) and verified accessibility via browser using port forwarding and NodePort.
 
 ☸️ Kubernetes Deployment Overview
-Deployment Manifest
 
-Defines the replica count, container image, and readiness/liveness probes.
+Deployment Manifest: Defines replicas, container image, readiness/liveness probes. Ensures app resilience and auto-restart on failure.
 
-Ensures app resilience and auto-restart on failure.
+Service Manifest: Exposes the app through NodePort for external access. Allows the app to be reached via EC2 public IP.
 
-Service Manifest
-
-Exposes the app through a NodePort service type for external access.
-
-Allows the app to be reached through EC2’s public IP and the configured port.
-
-After applying both manifests, the application successfully launched within the Minikube cluster.
+After applying both manifests, the application successfully launched in the Minikube cluster.
 
 🌍 Accessing the Application
 
@@ -85,54 +78,47 @@ Used the command:
 minikube service nextjs-service --url
 
 
-Accessed the app in a browser using the EC2 public IP or Minikube’s forwarded port.
-
-Result: The application was fully functional and accessible externally.
+Accessed the app in a browser using EC2 public IP or Minikube forwarded port.
 
 ✅ Results
 
-Successfully containerized the Next.js app.
+Successfully containerized the Next.js app
 
-Automated CI/CD pipeline using GitHub Actions and GHCR.
+Automated CI/CD pipeline with GitHub Actions and GHCR
 
-Seamless Kubernetes deployment on Minikube running within AWS EC2.
+Seamless Kubernetes deployment on Minikube running on AWS EC2
 
-Application accessible via browser, confirming end-to-end success.
+Application accessible externally through browser
 
 🧠 Key Learnings
 
-Through this project, I gained strong hands-on experience in:
+Creating and optimizing Docker images for production
 
-Creating and optimizing Docker images for production.
+Implementing CI/CD pipelines using GitHub Actions
 
-Implementing CI/CD pipelines using GitHub Actions.
+Managing and deploying workloads on Kubernetes clusters
 
-Managing and deploying workloads on Kubernetes clusters.
+Resolving Minikube image pull and authentication challenges
 
-Resolving Minikube image pull and authentication challenges.
+Exposing containerized apps securely on AWS EC2 instances
 
-Exposing containerized apps securely on AWS EC2 instances.
+📸 Project Screenshots
+
+All key screenshots are shown below:
+
+🐳 Docker Container Running
+
+🌍 Webpage Running
+
+☸️ Kubernetes Pods Running
+
+🤖 GitHub Actions Workflow
 
 🌐 Repository & Image Links
 
 Repository URL: https://github.com/zainabkousar/nextjs-docker-app
 
 GHCR Image URL: ghcr.io/zainabkousar/nextjs-docker-app:latest
-
-Assessment Screenshots
-
-### 🐳 Docker Container Running
-![Docker Container Running](images/Docker container running.png)
-
-### 🌍 Webpage Running
-![Webpage Running](images/Webpage Running.png)
-
-### ☸️ Kubernetes Pods Running
-![Kubectl Pods Running](images/Kubectl pods running.png)
-
-### 🤖 GitHub Actions Workflow
-![Workflow Run](images/Workflow run.png)
-
 
 📜 Author
 
