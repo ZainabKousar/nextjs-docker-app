@@ -123,7 +123,8 @@ All key screenshots are shown below:
 
 Repository URL: https://github.com/zainabkousar/nextjs-docker-app
 
-GHCR Image URL: ghcr.io/zainabkousar/nextjs-docker-app:latest
+GHCR Image URL: [ghcr.io/zainabkousar/nextjs-docker-app:latest](https://ghcr.io/zainabkousar/nextjs-docker-app)
+
 
 📜 Author
 
