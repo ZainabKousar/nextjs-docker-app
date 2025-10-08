@@ -106,13 +106,18 @@ Exposing containerized apps securely on AWS EC2 instances
 
 All key screenshots are shown below:
 
-🐳 Docker Container Running
+### 🐳 Docker Container Running
+![Docker Container Running](images/Docker%20container%20running.png)
 
-🌍 Webpage Running
+### 🌍 Webpage Running
+![Webpage Running](images/Webpage%20Running.png)
 
-☸️ Kubernetes Pods Running
+### ☸️ Kubernetes Pods Running
+![Kubectl Pods Running](images/Kubectl%20pods%20running.png)
 
-🤖 GitHub Actions Workflow
+### 🤖 GitHub Actions Workflow
+![Workflow Run](images/Workflow%20run.png)
+
 
 🌐 Repository & Image Links
 
